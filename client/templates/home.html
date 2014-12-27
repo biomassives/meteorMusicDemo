@@ -1,0 +1,44 @@
+<template name="home">
+  <div class="page home">
+
+    {{>nav title='Local Market' black=true}}
+
+    <div class="content-scrollable">
+      <div class="bg-image home">
+        <span class="hours"><span class="title-callout">BuyMziki </span>
+        All Delicious all the time</span>
+        <span class="arrow"></span>
+       </div>
+
+      <div class="callout-news">
+        <span class="title-callout">News</span>
+        {{latestNews.text}}
+      </div>
+
+      <h2 class="list-title">Who'se Charting</h2>
+      <div class="list-subtitle">BuyMziki Member responses</div>
+      <div class="list-activities">
+        {{#each activities}}
+          {{> activity}}
+        {{else}}
+          <div class="wrapper-message">
+            <div class="title-message">No comments yet!</div>
+            <div class="subtitle-message">Share a review and it will show up here.</div>
+          </div>
+        {{/each}}
+      </div>
+      <a href="{{pathFor 'feed'}}" class="btn-primary">See what's cooking</a>
+
+      <h2 class="list-title">Our Favorite Artists</h2>
+      <div class="list-subtitle">Hand-picked by BuyMziki staff</div>
+      <div class="list-recipes">
+        {{#each featuredRecipes}}
+          {{> recipeItem recipe=this size='small'}}
+        {{/each}}
+      </div>
+
+      <a href="{{pathFor 'recipes'}}" class="btn-primary">Explore all BuyMziki Artists</a>
+    </div>
+
+  </div>
+</template>

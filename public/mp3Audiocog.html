@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://audiocogs.org/codecs/mp3/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8"> 
+	<title>MP3 — Audiocogs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="./MP3 — Audiocogs_files/all.min.css">
+	<link rel="shortcut icon" href="http://audiocogs.org/favicon.ico">
+	<!--[if lt IE 9]>
+	<script src="/playerRes/html5shiv.js"></script>
+	<![endif]-->
+
+	<link rel="alternate" type="application/rss+xml" title="Audiocogs Blog" href="http://audiocogs.org/rss.xml">
+</head>
+<body class="codec">
+<section>
+	<section id="content">
+
+<link rel="stylesheet" href="http://audiocogs.org/dgplayer/player.css">
+
+<script src="recipes/playerRes/classlist.js"></script>
+<script>
+var unsupported;
+if (!window.Audio || !('mozWriteAudio' in new Audio()) && !window.AudioContext && !window.webkitAudioContext) {
+    unsupported = true;
+    document.body.classList.add("unsupported");
+}
+</script>
+<div id="unsupported">
+We're really sorry about this, but it looks like your browser doesn't support an Audio API. Please
+try these demos in Chrome 15+ or Firefox 8+ or watch a <a href="http://vimeo.com/33919455">screencast</a>.
+</div>
+
+
+<script src="recipes/playerRes/player.js"></script>
+<script src="recipes/playerRes/auroraplayer.js"></script>
+
+<div class="player" id="dgplayer" tabindex="0">
+    <div class="avatar">
+        <img src="playerRes/fallback_album_art.png">
+    </div>
+
+    <span class="title">K-Nel (Remix)</span>
+    <span class="artist">K-Nel</span>
+
+    <div class="button pause"></div>
+
+    <div class="volume">
+        <img src="recipes/playerRes/volume_high.png">
+        <div class="track">
+            <div class="progress" style="height: 25px;"></div>
+            <div class="handle" style="-webkit-transform: translate3d(0, -17px, 0);"></div>
+        </div>
+        <img src="recipes/playerRes/volume_low.png">
+    </div>
+
+    <div class="seek">
+        <span>0:25</span>
+        <div class="track">
+            <div class="loaded" style="width: 228px;"></div>
+            <div class="progress" style="width: 32.174412462207634px;"></div>
+        </div>
+        <span>-2:32</span>
+    </div>
+    
+    <div class="file_button"></div>
+    <span class="file_description">Choose an MP3 file on your computer</span>
+</div>
+
+<script src="recipes/playerRes/aurora.js"></script>
+<script src="recipes/playerRes/mp3.js"></script>
+
+<script type="text/javascript">
+// Chrome doesn't support changing the sample rate, and uses whatever the hardware supports.
+// We cheat here.  Instead of resampling on the fly, we're currently just loading two different
+// files based on common hardware sample rates.
+var _sampleRate = (function() {
+    var AudioContext = (window.AudioContext || window.webkitAudioContext);
+    if (!AudioContext)
+        return 44100;
+    
+    return new AudioContext().sampleRate;
+}());
+
+(function(DGPlayer){
+    if (unsupported) return;
+    
+    DGPlayer.volume = 100;
+    
+    var player, onplay;
+    var url = 'http://buymziki.com/audio/stream/audio_file/39/key=dLTbxHcYf6Jt/file.mp3';
+    
+    DGPlayer.on('play', onplay = function(){
+        if (player)
+            player.disconnect();
+            
+        player = new DGAuroraPlayer(AV.Player.fromURL(url), DGPlayer);
+        DGPlayer.off('play', onplay);
+    });
+    
+    DGPlayer.on('file', function(file) {        
+        if (file) {
+            if (player)
+                player.disconnect();
+                
+            player = new DGAuroraPlayer(AV.Player.fromFile(file), DGPlayer);
+            DGPlayer.off('play', onplay);
+        }
+    });
+    
+}(DGPlayer(document.getElementById('dgplayer'))));
+</script>
+
+
+		</article>
+
+	</section>
+</section>
+
+
+
+</body></html>
