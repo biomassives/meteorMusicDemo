@@ -1,9 +1,9 @@
 App.info({
-  name: 'Local Market',
-  description: 'A recipe sharing app made in Meteor.',
-  author: 'Percolate Studio Team',
-  email: 'us@percolatestudio.com',
-  website: 'http://percolatestudio.com',
+  name: 'BuyMziki App',
+  description: 'A social music sharing app made in Meteor.',
+  author: 'Greg Willson',
+  email: 'greg@biomassiv.es',
+  website: 'http://biomassiv.es',
   version: '0.0.1'
 });
 
