@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://audiocogs.org/codecs/mp3/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8"> 
+	<title>MP3 — Audiocogs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="/all.min.css">
+	<!--[if lt IE 9]>
+	<script src="/playerRes/html5shiv.js"></script>
+	<![endif]-->
+
+	<link rel="alternate" type="application/rss+xml" title="Audiocogs Blog" href="http://audiocogs.org/rss.xml">
+</head>
+<body class="codec">
+<section>
+	<section id="content">
+
+<link rel="stylesheet" href="http://audiocogs.org/dgplayer/player.css">
+
+<script src="/classlist.js"></script>
+<script>
+var unsupported;
+if (!window.Audio || !('mozWriteAudio' in new Audio()) && !window.AudioContext && !window.webkitAudioContext) {
+    unsupported = true;
+    document.body.classList.add("unsupported");
+}
+</script>
+<div id="unsupported">
+We're really sorry about this, but it looks like your browser doesn't support an Audio API. Please
+try these demos in Chrome 15+ or Firefox 8+ or watch a <a href="http://vimeo.com/33919455">screencast</a>.
+</div>
+
+
+<script src="/player.js"></script>
+<script src="/auroraplayer.js"></script>
+
+<div class="player" id="bmzikiPlayer" tabindex="0">
+    <div class="avatar">
+        <img src="/fallback_album_art.png">
+    </div>
+
+    <span class="title">K-Nel (Remix)</span>
+    <span class="artist">K-Nel</span>
+
+    <div class="button pause"></div>
+
+    <div class="volume">
+        <img src="/volume_high.png">
+        <div class="track">
+            <div class="progress" style="height: 25px;"></div>
+            <div class="handle" style="-webkit-transform: translate3d(0, -17px, 0);"></div>
+        </div>
+        <img src="/volume_low.png">
+    </div>
+
+    <div class="seek">
+        <span>0:25</span>
+        <div class="track">
+            <div class="loaded" style="width: 228px;"></div>
+            <div class="progress" style="width: 32.174412462207634px;"></div>
+        </div>
+        <span>-2:32</span>
+    </div>
+    
+    <div class="file_button"></div>
+    <span class="file_description">Choose an MP3 file on your computer</span>
+</div>
+
+
+
+
+<div class="blue_monday_player" onclick="event.cancelBubble = true; if(event.stopPropagation) event.stopPropagation();">
+    <div id="jquery_jplayer_m549e89c466843" class="jp-jplayer"></div>
+
+    <div id="jp_container_m549e89c466843" class="jp-audio">
+        <div class="jp-type-playlist">
+            <div class="jp-gui">
+                <div class="jp-video-play">
+                    <a href="javascript:" class="jp-video-play-icon" tabindex="1">play</a>
+                </div>
+                <div class="jp-interface">
+                    <div class="jp-seek-holder">
+                        <div class="jp-progress">
+                            <div class="jp-seek-bar">
+                                <div class="jp-play-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jp-current-time"></div>
+                    <div class="jp-duration"></div>
+                    <div class="jp-controls-holder">
+                        <ul class="jp-controls">
+                            <li><a href="javascript:" class="jp-previous" tabindex="1" title="previous"></a></li>
+                            <li><a href="javascript:" class="jp-play" tabindex="1" title="play"></a></li>
+                            <li><a href="javascript:" class="jp-pause" tabindex="1" title="pause"></a></li>
+                            <li><a href="javascript:" class="jp-next" tabindex="1" title="next"></a></li>
+                            <li><a href="javascript:" class="jp-stop" tabindex="1" title="stop"></a></li>
+                            <li><a href="javascript:" class="jp-mute" tabindex="1" title="mute"></a></li>
+                            <li><a href="javascript:" class="jp-unmute" tabindex="1" title="unmute"></a></li>
+                            <li><a href="javascript:" class="jp-volume-max" tabindex="1" title="max volume"></a></li>
+                        </ul>
+                        <div class="jp-volume-bar">
+                            <div class="jp-volume-bar-value"></div>
+                        </div>
+                        <ul class="jp-toggles">
+                            <li><a href="javascript:" class="jp-shuffle" tabindex="1" title="shuffle"></a></li>
+                            <li><a href="javascript:" class="jp-shuffle-off" tabindex="1" title="shuffle off"></a></li>
+                            <li><a href="javascript:" class="jp-repeat" tabindex="1" title="repeat"></a></li>
+                            <li><a href="javascript:" class="jp-repeat-off" tabindex="1" title="repeat off"></a></li>
+                        </ul>
+                    </div>
+                    <div class="jp-title">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="jp-playlist">
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div><br>
+
+
+
+
+<script src="/aurora.js"></script>
+<script src="/mp3.js"></script>
+
+<script type="text/javascript">
+// Chrome doesn't support changing the sample rate, and uses whatever the hardware supports.
+// We cheat here.  Instead of resampling on the fly, we're currently just loading two different
+// files based on common hardware sample rates.
+var _sampleRate = (function() {
+    var AudioContext = (window.AudioContext || window.webkitAudioContext);
+    if (!AudioContext)
+        return 44100;
+    
+    return new AudioContext().sampleRate;
+}());
+
+(function(DGPlayer){
+    if (unsupported) return;
+    
+    DGPlayer.volume = 100;
+    
+    var player, onplay;
+    var url = 'http://buymziki.com/audio/stream/audio_file/105/key=8hjQGpOKTB69/file.mp3';
+    
+    DGPlayer.on('play', onplay = function(){
+        if (player)
+            player.disconnect();
+            
+        player = new DGAuroraPlayer(AV.Player.fromURL(url), DGPlayer);
+        DGPlayer.off('play', onplay);
+    });
+    
+    DGPlayer.on('file', function(file) {        
+        if (file) {
+            if (player)
+                player.disconnect();
+                
+            player = new DGAuroraPlayer(AV.Player.fromFile(file), DGPlayer);
+            DGPlayer.off('play', onplay);
+        }
+    });
+    
+}(DGPlayer(document.getElementById('dgplayer'))));
+</script>
+
+
+		</article>
+
+	</section>
+</section>
+
+
+
+</body></html>
