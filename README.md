@@ -16,6 +16,10 @@ How to run locally-
 
  images are being swapped out for demo to use a generated set from something
  
+ uses Cordova plugin for Android build.
+ 
+ 
+ 
 ============
 TODO
  
