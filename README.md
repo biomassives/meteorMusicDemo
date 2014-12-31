@@ -23,6 +23,7 @@ How to run locally-
 ============
 TODO
  
+ add use of mongo db
 integrated full screen video effect for cover page
 player and buy link
 integrate with json data models provided by cheerio in separate app -
