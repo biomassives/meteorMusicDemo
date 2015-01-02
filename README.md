@@ -28,9 +28,8 @@ integrated full screen video effect for cover page
 player and buy link
 integrate with json data models provided by cheerio in separate app -
 
-meteorJambaseScraper
+data source updater in separate app >> meteorJambaseScraper
 ============
-
 Uses Cheerio
 
 Local Market
