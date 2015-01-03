@@ -14,11 +14,11 @@ Meteor.publish('feed', function() {
   return Activities.find({}, {sort: {date: -1}, limit: 10});
 });
 
-Meteor.publish('recipe', function(name) {
+Meteor.publish('artists', function(name) {
   check(name, String);
   return [
-    BookmarkCounts.find({recipeName: name}),
-    Activities.find({recipeName: name})
+    BookmarkCounts.find({artistsName: name}),
+    Activities.find({artistsName: name})
   ];
 });
 
@@ -27,7 +27,7 @@ Meteor.publish(null, function() {
   return Meteor.users.find(this.userId, {
     fields: {
       admin: 1,
-      bookmarkedRecipeNames: 1,
+      bookmarkedartistNames: 1,
       'services.twitter.profile_image_url_https': 1
     }
   });

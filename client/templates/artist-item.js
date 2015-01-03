@@ -1,6 +1,6 @@
-Template.recipeItem.helpers({
+Template.artistItem.helpers({
   path: function () {
-    return Router.path('recipe', this.recipe);
+    return Router.path('artist', this.artist);
   },
   
   highlightedClass: function () {
@@ -9,7 +9,7 @@ Template.recipeItem.helpers({
   },
   
   bookmarkCount: function () {
-    var count = BookmarkCounts.findOne({recipeName: this.name});
+    var count = BookmarkCounts.findOne({artistName: this.name});
     return count && count.count;
   }
 });

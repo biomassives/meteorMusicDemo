@@ -1,14 +1,14 @@
-<template name="recipes">
-  <div class="page recipes">
+<template name="artists">
+  <div class="page artists">
     {{> nav title='Artists' black=true}}
 
     <div class="content-scrollable">
-      <div class="list-recipes">
+      <div class="list-artists">
         {{#each this}}
           {{#if highlighted}}
-            {{> recipeItem recipe=this size='large'}}
+            {{> artistItem artist=this size='large'}}
           {{else}}
-            {{> recipeItem recipe=this size='small'}}
+            {{> artistItem artist=this size='small'}}
           {{/if}}
         {{/each}}
       </div>

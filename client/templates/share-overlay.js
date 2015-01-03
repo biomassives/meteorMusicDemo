@@ -47,7 +47,7 @@ Template.shareOverlay.events({
     var tweet = Session.get(TWEETING_KEY);
     
     Meteor.call('createActivity', {
-      recipeName: self.name,
+      artistName: self.name,
       text: text,
       image: Session.get(IMAGE_KEY)
     }, tweet, Geolocation.currentLocation(), function(error, result) {
@@ -58,10 +58,10 @@ Template.shareOverlay.events({
           action: 'View',
           title: 'Your photo was shared.',
           callback: function() {
-            Router.go('recipe', { name: self.name }, 
+            Router.go('artist', { name: self.name }, 
               { query: { activityId: result } });
 
-            Template.recipe.setTab('feed');
+            Template.artist.setTab('feed');
           }
         });
       }

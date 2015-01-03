@@ -1,0 +1,15 @@
+<template name="artistItem">
+  <a class="item-artist {{highlightedClass}}" href="{{path}}">
+    {{#with artist}}
+      <span class="attribution">
+        <span class="title-artist">{{title}}</span>
+        <span class="metadata-artist">
+          <span class="author-artist">{{source.name}}</span>
+          <span class="bookmarks-artist"><span class="icon-bookmark"></span> {{bookmarkCount}}</span>
+        </span>
+      </span>
+    {{/with}}
+
+    <img src="{{artistImage artist=artist size=size}}" />
+  </a>
+</template>

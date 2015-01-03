@@ -23,11 +23,11 @@ var DIMENSIONS = {
   full: '640x800'
 };
 
-UI.registerHelper('recipeImage', function(options) {
+UI.registerHelper('artistImage', function(options) {
   var size = options.hash.size || 'large';
 
-  if (options.hash.recipe)
-    return '/img/recipes/' + DIMENSIONS[size] + '/' + options.hash.recipe.name + '.jpg';
+  if (options.hash.artist)
+    return '/img/artists/' + DIMENSIONS[size] + '/' + options.hash.artist.name + '.jpg';
 });
 
 Handlebars.registerHelper('activePage', function() {

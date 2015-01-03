@@ -1,8 +1,8 @@
-<template name="recipe">
-  <div class="page recipe {{activeTabClass}}">
 
-    {{#nav title='Buy.Mziki - A/V' black=true back=true}}
+<template name="artist">
 
+  <div class="page artist {{activeTabClass}}">
+    {{#nav title='artist' black=true back=true}}
       {{#if bookmarked}}
         <a href="#" class="nav-item js-remove-bookmark bookmarked"><span class="icon-bookmark"></span></a>
       {{else}}
@@ -11,39 +11,40 @@
       <a href="#" class="nav-item js-share"><span class="icon-camera"></span></a>
     {{/nav}}
 
-    <div class="image-recipe" style="background-image: url('{{recipeImage recipe=this size='full'}}')"></div>
+    <div class="image-artist" style="background-image: url('{{artistImage artist=this size='full'}}')"></div>
 
-    <div class="attribution-recipe js-uncollapse">
-      <h1 class="title-recipe">{{title}}</h1>
+    <div class="attribution-artist js-uncollapse">
+      <h1 class="title-artist">{{title}}</h1>
       <div class="metadata-wrapper">
-        <p class="description-recipe">{{excerpt}}</p>
+        <p class="description-artist">{{excerpt}}</p>
         <span class="source">{{source.name}}</span>
         <span class="time">{{cookTime}}</span>
       </div>
 
       <div class="btns-group">
-        <a class="btn-secondary {{#if isActiveTab 'make'}}active{{/if}} {{#if isActiveTab 'recipe'}}no-state{{/if}} js-show-recipe">Listen</a>
-        <a class="btn-secondary {{#if isActiveTab 'feed'}}active{{/if}} {{#if isActiveTab 'recipe'}}no-state{{/if}} js-show-feed">Share</a>
+        <a class="btn-secondary {{#if isActiveTab 'make'}}active{{/if}} {{#if isActiveTab 'artist'}}no-state{{/if}} js-show-artist">Bump It</a>
+        <a class="btn-secondary {{#if isActiveTab 'feed'}}active{{/if}} {{#if isActiveTab 'artist'}}no-state{{/if}} js-show-feed">Share</a>
       </div>
     </div>
 
 
     <div class="content-scrollable static-nav make-scrollable">
-      <a class="btn-tertiary js-share"><span class="icon-camera"></span> Share that you like this!</a>
+      <a class="btn-tertiary js-share"><span class="icon-camera"></span> Post a Picture Comment</a>
 
-      <h2 class="list-title">Listen</h2>
+      <h2 class="list-title">About the Artist</h2>
       <ul class="list-ingredients">
         {{#each ingredients}}
-          <li class="item-ingredient">{{this}} {{#if ingredients}}<a class="btn" href="">$0.99</a>{{/if}}</li>
+          <li class="item-ingredient">{{this}}</li>
         {{/each}}
       </ul>
 
-      <h2 class="list-title">Artist Profile</h2>
+      <h2 class="list-title">Listen</h2>
       <ol class="list-directions">
-        who: {{recipesData.source.audiofile}}
-        <BR>
         {{#each directions}}
           <li class="item-direction">
+
+<audio title="Sights And Sounds INSTRUMENTAL (Prod.Ghostboy) " src="https://buymziki.com/audio/stream/audio_file/107/key=qH8p9w0wkoRR/file.mp3" preload="none" id="jp_audio_0"></audio>
+            
             <span class="text">{{this}}</span>
           </li>
         {{/each}}
@@ -51,7 +52,7 @@
           ...
           </li>
       </ol>
-      <a href="{{source.url}}" target="_blank" class="btn-primary js-open">See {{source.name}}'s Buy Mziki profile </a>
+      <a href="{{source.url}}" target="_blank" class="btn-primary js-open">See full artist on {{source.name}}</a>
     </div>
 
     <div class="content-scrollable static-nav feed-scrollable">
@@ -62,7 +63,7 @@
         {{else}}
           <div class="wrapper-message">
             <div class="title-message">No feed activity yet</div>
-            <div class="subtitle-message">Be the first to share <a class="js-share">Share now</a></div>
+            <div class="subtitle-message">Be the first to share that you made this artist. <a class="js-share">Share now</a></div>
           </div>
         {{/each}}
       </div>

@@ -1,7 +1,7 @@
 <template name="home">
   <div class="page home">
 
-    {{>nav title='Local Market' black=true}}
+    {{>nav title='Buy Mziki' black=true}}
 
     <div class="content-scrollable">
       <div class="bg-image home">
@@ -27,17 +27,17 @@
           </div>
         {{/each}}
       </div>
-      <a href="{{pathFor 'feed'}}" class="btn-primary">See what's cooking</a>
+      <a href="{{pathFor 'feed'}}" class="btn-primary">See what's new</a>
 
       <h2 class="list-title">Our Favorite Artists</h2>
       <div class="list-subtitle">Hand-picked by BuyMziki staff</div>
-      <div class="list-recipes">
-        {{#each featuredRecipes}}
-          {{> recipeItem recipe=this size='small'}}
+      <div class="list-artists">
+        {{#each featuredartists}}
+          {{> artistItem artist=this size='small'}}
         {{/each}}
       </div>
 
-      <a href="{{pathFor 'recipes'}}" class="btn-primary">Explore all BuyMziki Artists</a>
+      <a href="{{pathFor 'artists'}}" class="btn-primary">Explore all BuyMziki Artists</a>
     </div>
 
   </div>
