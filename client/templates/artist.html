@@ -39,14 +39,15 @@
       </ul>
 
       <h2 class="list-title">Listen</h2>
-      <ol class="list-directions">
+      <ul class="list-directions">
         {{#each directions}}
           <li class="item-direction">
+         <a href={{this}}>MP3 clip</a> - <a href={{this.buylink}}>buy this track</a>
           <audio title="{{this.title}}x title" src="{{this}}" type="audio/mp3" controls="controls" id="audio-player"></audio>            
           </li>
         {{/each}}
-      </ol>
-      <a href="{{source.url}}" target="_blank" class="btn-primary js-open">See full artist on {{source.name}}</a>
+      </ul>
+      <a href="{{source.url}}" target="_blank" class="btn-primary js-open">See full artist bio {{source.name}}</a>
     </div>
 
     <div class="content-scrollable static-nav feed-scrollable">
