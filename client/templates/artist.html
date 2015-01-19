@@ -42,15 +42,9 @@
       <ol class="list-directions">
         {{#each directions}}
           <li class="item-direction">
-
-<audio title="Sights And Sounds INSTRUMENTAL (Prod.Ghostboy) " src="https://buymziki.com/audio/stream/audio_file/107/key=qH8p9w0wkoRR/file.mp3" preload="none" id="jp_audio_0"></audio>
-            
-            <span class="text">{{this}}</span>
+          <audio title="{{this.title}}x title" src="{{this}}" type="audio/mp3" controls="controls" id="audio-player"></audio>            
           </li>
         {{/each}}
-          <li class="item-direction">
-          ...
-          </li>
       </ol>
       <a href="{{source.url}}" target="_blank" class="btn-primary js-open">See full artist on {{source.name}}</a>
     </div>
