@@ -41,16 +41,17 @@
       <h2 class="list-title">Listen</h2>
 
 
-      <div class="list-songs">
+
+      <ul class="list-songs">
+
         {{#each addIndex songs}}
-      
-        <p>
-          
-          <span class="ogg{{index}}"><a href="#" title="play"><img title="BuyMziki Artist Track" src="/img/activity/sound.png"></a></span><span class="ogg{{index}}_stop"><a href="#"><img title="Stop Play" src="/img/activity/stop.png"></a> <a href={{this.buylink}}><img src="/img/activity/shop.png" title="buy tracks from {{title}}"></a>  ~ Title: {{value}} </span> 
-        </p>
-          
+        <li> 
+          <table><tr><td>
+          <span class="{{value0}}{{index}}"><a href="#" title="play"><img title="BuyMziki Artist Track - {{value}} - {{value}}" src="/img/activity/sound.png"></a></span><span class="{{value0}}{{index}}_stop"><a href="#"><img title="Stop Play" src="/img/activity/stop.png"></a> <a href={{value2}}><img src="/img/activity/shop.png" title="buy tracks from {{title}}"></a></span></td><td>Song Title: {{value1}}</td></tr></table>
+        </li>
         {{/each}}
-      </div>
+
+      </ul>
       <a href="{{source.url}}" target="_blank" class="btn-primary js-open">See full artist bio {{source.name}}</a>
     </div>
 

@@ -39,6 +39,7 @@ Handlebars.registerHelper('activePage', function() {
 
 UI.registerHelper('addIndex', function (all) {
     return _.map(all, function(val, index) {
-        return {index: index, value: val};
+        val = val.split("__")
+        return {index: index, value0: val[0], value1: val[1], value2: val[2] };
     });
 });

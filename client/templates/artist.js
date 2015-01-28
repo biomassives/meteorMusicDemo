@@ -1,11 +1,12 @@
 var TAB_KEY = 'artistShowTab';
 
 
+var esther0 = new buzz.sound('/sounds/EstherLiana_Imela.mp3');
+
 //var beat0 = new buzz.sound('/sounds/naomis-baby_knel-ghostboy-ozmosis.mp3');
 var beat2 = new buzz.sound('/sounds/k-nel-ft-jae-rich-vera-shindika-produced-by-ghostboy.mp3');
 var elizabethwambui = new buzz.sound('/sounds/elizabeth-wambui_nianguriire.mp3');
 var bronzeh = new buzz.sound('/sounds/nafsi-yangu_bronzeh.mp3');
-var esther1 = new buzz.sound('/sounds/EstherLiana_Imela.mp3');
 
 
 //if (Template.artist.name == "Esther Liana")
@@ -78,26 +79,15 @@ Template.artist.events({
     Meteor.call('bookmarkArtist', this.name);
   },
 
-    'click .ogg0': function(event) {
+  'click .esther-liana0': function(event) {
 
-        esther1.play().loop();    
-
-  },
-
-  'click .ogg0_stop': function(event) {
-
-        esther1.play().stop();        
-  },
-
-  'click .ogg1': function(event) {
-
-        beat2.play().loop();    
+        esther0.play().fadeIn();    
 
   },
 
-  'click .ogg1_stop': function(event) {
+  'click .esther-liana0_stop': function(event) {
 
-        beat2.play().stop();        
+        esther0.play().stop();        
   },
 
   'click .ogg2': function(event) {
