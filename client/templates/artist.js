@@ -4,8 +4,12 @@ var TAB_KEY = 'artistShowTab';
 var beat0 = new buzz.sound('/sounds/naomis-baby_knel-ghostboy-ozmosis.mp3');
 var beat3 = new buzz.sound('/sound/k-nel-ft-jae-rich-vera-shindika-produced-by-ghostboy.mp3');
 
-//if (Template.artist.name == "Bobby Ghostboy Dinero")
-var beat2 = new buzz.sound('/sound/nafsi-yangu_bronzeh.mp3');
+var elizabethwambui = new buzz.sound('elizabeth-wambui_nianguriire.mp3');
+var bronzeh = new buzz.sound('/sound/nafsi-yangu_bronzeh.mp3');
+
+if ( activePage != "Bobby Ghostboy Dinero")
+var beat2 = new buzz.sound('/sound/truck.ogg');
+
 
 //if (Template.artist.name == "Esther Liana")
 //var beat2 = new buzz.sound('/sound/truck.ogg');
@@ -76,6 +80,18 @@ Template.artist.events({
     
     Meteor.call('bookmarkArtist', this.name);
   },
+
+  'click .ogg2': function(event) {
+
+        title.play().loop();    
+
+  },
+
+  'click .stopsound2': function(event) {
+
+        title.play().stop();        
+  },
+
 
   'click .ogg': function(event) {
 

@@ -41,19 +41,19 @@
       <h2 class="list-title">Listen</h2>
 
 
- <div class="ogg"><a style="display: block;" href="javascript:" class="jp-play" tabindex="1" title="play"></a></div>
-
-
- <div class="ogg0"><a href="#"><img title="Test this format" src="/img/activity/sound.png"></a></div>
-
+ <div class="ogg"><a style="display: block;" href="javascript:" class="jp-play" tabindex="1" title="play">plAY</a></div>
  <div class="stopsound"><a href="#">stop</a></div>
 
+ <div class="ogg2"><a href="#"><img title="Test this format" src="/img/activity/sound.png"></a></div>
 
-      <ul class="list-directions">
-        {{#each directions}}
+ <div class="stopsound2"><a href="#">stop</a></div>
+
+
+      <ul class="list-songs">
+        {{#each songs}}
           <li class="item-direction">
          <a href={{this}}>MP3 clip</a> - <a href={{this.buylink}}>buy this track</a>
-          <audio title="{{this.title}}x title" src="{{this}}" type="audio/mp3" controls="controls" id="audio-player"></audio>            
+          {{this}}            
           </li>
         {{/each}}
       </ul>
