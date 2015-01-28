@@ -1,6 +1,6 @@
 <template name="bookmarks">
   <div class="page bookmarks">
-    {{> nav title='Your playlist' subtext=artistCount}}
+    {{> nav title='BuyMziki player' subtext=artistCount}}
 
     <div class="content-scrollable">
       <div class="list-artists">
@@ -8,8 +8,74 @@
           {{> artistItem artist=this size='large'}}
         {{else}}
           <div class="wrapper-message">
-            <div class="title-message">No bookmarks yet</div>
-            <div class="subtitle-message">Tap <span class="icon-bookmark-hollow"></span> to bookmark your favorite songs. <a href="{{pathFor 'home'}}">Return home</a></div>
+            <div class="title-message">BuyMziki</div>
+
+  <span class="switch">
+  <span class="switch-border1">
+    <span class="switch-border2">
+      <input id="switch1" type="checkbox" checked />
+      <label for="switch1"></label>
+      <span class="switch-top"></span>
+      <span class="switch-shadow"></span>
+      <span class="switch-handle"></span>
+      <span class="switch-handle-left"></span>
+      <span class="switch-handle-right"></span>
+      <span class="switch-handle-top"></span>
+      <span class="switch-handle-bottom"></span>
+      <span class="switch-handle-base"></span>
+      <span class="switch-led switch-led-green">
+        <span class="switch-led-border">
+          <span class="switch-led-light">
+            <span class="switch-led-glow"></span>
+          </span>
+        </span>
+      </span>
+      <span class="switch-led switch-led-red">
+        <span class="switch-led-border">
+          <span class="switch-led-light">
+            <span class="switch-led-glow"></span>
+          </span>
+        </span>
+      </span>
+    </span>
+  </span>
+</span>
+
+<span class="switch">
+  <span class="switch-border1">
+    <span class="switch-border2">
+      <input id="switch2" type="checkbox" />
+      <label for="switch2"></label>
+      <span class="switch-top"></span>
+      <span class="switch-shadow"></span>
+      <span class="switch-handle"></span>
+      <span class="switch-handle-left"></span>
+      <span class="switch-handle-right"></span>
+      <span class="switch-handle-top"></span>
+      <span class="switch-handle-bottom"></span>
+      <span class="switch-handle-base"></span>
+      <span class="switch-led switch-led-green">
+        <span class="switch-led-border">
+          <span class="switch-led-light">
+            <span class="switch-led-glow"></span>
+          </span>
+        </span>
+      </span>
+      <span class="switch-led switch-led-red">
+        <span class="switch-led-border">
+          <span class="switch-led-light">
+            <span class="switch-led-glow"></span>
+          </span>
+        </span>
+      </span>
+    </span>
+  </span>
+</span>
+
+
+
+
+            <div class="subtitle-message">Tap <span class="icon-bookmark-hollow"></span> to add your favorite songs. <a href="{{pathFor 'home'}}">Return home</a></div>
 
           </div>
         {{/each}}
