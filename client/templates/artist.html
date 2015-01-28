@@ -42,12 +42,11 @@
 
 
       <div class="list-songs">
-        {{#each songs}}
+        {{#each addIndex songs}}
       
         <p>
-          Title: {{this}}<BR>
-          <span class="ogg3"><a href="#" title="play"><img title="BuyMziki Artist Track" src="/img/activity/sound.png"></a></span><span class="ogg3_stop"><a href="#"><img title="Stop Play" src="/img/activity/stop.png"></a> <a href={{this.buylink}}><img src="/img/activity/shop.png" title="buy tracks from {{title}}"></a>    
-          </span>
+          
+          <span class="ogg{{index}}"><a href="#" title="play"><img title="BuyMziki Artist Track" src="/img/activity/sound.png"></a></span><span class="ogg{{index}}_stop"><a href="#"><img title="Stop Play" src="/img/activity/stop.png"></a> <a href={{this.buylink}}><img src="/img/activity/shop.png" title="buy tracks from {{title}}"></a>  ~ Title: {{value}} </span> 
         </p>
           
         {{/each}}
