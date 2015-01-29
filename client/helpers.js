@@ -37,9 +37,13 @@ Handlebars.registerHelper('activePage', function() {
   return _.include(routeNames, Router.current().route.name) && 'active';
 });
 
+String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase()  + this.slice(1);
+}
+
 UI.registerHelper('addIndex', function (all) {
     return _.map(all, function(val, index) {
         val = val.split("__")
-        return {index: index, value0: val[0], value1: val[1], value2: val[2] };
+        return {index: index, value0: val[0], value1: val[1], value2: val[2], value3: val[0].replace(/-/g, ' ').capitalize() };
     });
 });
