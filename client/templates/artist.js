@@ -25,10 +25,15 @@ var makadem0 = new buzz.sound('/sounds/makadem_Orudo-aye.mp3');
 var makena0 = new buzz.sound('/sounds/makena-skosh_.mp3');
 var clintoz0 = new buzz.sound('/sounds/clintoz_kwenye-mitambo.mp3');
 var ogyoung0 = new buzz.sound('/sounds/og-young_still-i-rule.mp3');
+var dspark0 = new buzz.sound('/sounds/dspark_be-strong.mp3');
+var revelation0 = new buzz.sound('/sounds/revelation_nionyeshe.mp3');
+var pacekenya0 = new buzz.sound('/sounds/pace-kenya_hands.mp3');
+var pacekenya1 = new buzz.sound('/sounds/pace-kenya_go-banannas.mp3');
+var revelation0 = new buzz.sound('/sounds/pace-kenya_twende-safari.mp3');
+var rebbzondari0 = new buzz.sound('/sounds/rebbz-ondari_nasimama.mp3');
 
-var 0 = new buzz.sound('/sounds/');'
-//if (Template.artist.name == "Esther Liana")
-//var beat2 = new buzz.sound('/sound/truck.ogg');
+//if (Template.artist.name == "Esther Liana")    var revelation = new buzz.sound('/sounds/
+
 
 
 Template.artist.created = function() {
@@ -227,11 +232,47 @@ Template.artist.events({
   },
 
 
+  'rebbzondari0': function(event) {
+
+        rebbzondari0.play().fadeIn();    
+
+  },
+
+  'click .rebbzondari0_stop': function(event) {
+
+        rebbzondari0.play().stop();        
+  },
+
+  'pace-kenya0': function(event) {
+
+        pacekenya0.play().fadeIn();    
+
+  },
+
+  'click .pace-kenya0_stop': function(event) {
+
+        pacekenya0.play().stop();        
+  },
+
+
+  'pace-kenya1': function(event) {
+
+        pacekenya1.play().fadeIn();    
+
+  },
+
+  'click .pace-kenya1_stop': function(event) {
+
+        pacekenya1.play().stop();        
+  },
+
+
     'click .jimwat1': function(event) {
 
         jimwat1.play().fadeIn();    
 
   },
+
 
   'click .jimwat1_stop': function(event) {
 
@@ -277,10 +318,32 @@ Template.artist.events({
 
   },
 
+  'click .dspark-the-rap-master0_stop': function(event) {
+
+        dspark0.play().stop();        
+  },
+    'click .dspark-the-rap-master0': function(event) {
+
+        dspark0.play().fadeIn();    
+
+  },
+
+  'click .revelation0_stop': function(event) {
+
+        revelation0.play().stop();        
+  },
+    'click .revelation0': function(event) {
+
+        revelation0.play().fadeIn();    
+
+  },
+
+
   'click .makena-skosh0_stop': function(event) {
 
         makena0.play().stop();        
   },
+
 
     'click .elizabeth-wambui0': function(event) {
 
