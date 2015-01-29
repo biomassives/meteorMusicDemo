@@ -32,9 +32,9 @@
       <a class="btn-tertiary js-share"><span class="icon-camera"></span> Post a Photo Comment</a>
 
       <h2 class="list-title">About the Artist</h2>
-      <ul class="list-ingredients">
-        {{#each ingredients}}
-          <li class="item-ingredient">{{this}}</li>
+      <ul class="list-bio">
+        {{#each bio}}
+          <li class="item-bioitem">{{this}}</li>
         {{/each}}
       </ul>
 
@@ -56,7 +56,7 @@
 
       <BR>
 
-      <a href="{{source.url}}" target="_blank" class="btn-primary js-open">See full artist bio {{source.name}}</a><a href="{{next}}" target="_blank" class="btn-primary js-open"> &gt;&gt; </a>
+      <a href="{{source.url}}" target="_blank" class="btn-primary js-open">See full artist bio {{source.name}}</a><a href="{{next}}" target="_blank" class="btn-primary js-show-next"> &gt;&gt; </a>
     </div>
 
     <div class="content-scrollable static-nav feed-scrollable">

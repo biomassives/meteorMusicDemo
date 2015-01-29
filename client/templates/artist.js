@@ -144,6 +144,12 @@ Template.artist.events({
     event.stopPropagation();
     Template.artist.setTab('make')
   },
+
+   'click .js-show-next': function(event) {
+    event.stopPropagation();
+    Template.artist.setTab('make')
+  },
+  
   
   'click .js-show-feed': function(event) {
     event.stopPropagation();
