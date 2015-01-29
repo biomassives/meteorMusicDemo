@@ -8,8 +8,8 @@ var elizabethwambui0 = new buzz.sound('/sounds/elizabeth-wambui_nianguriire.mp3'
 var elizabethwambui1 = new buzz.sound('/sounds/elizabeth-wambui_nianguriire.mp3');
 var jimwat0 = new buzz.sound('/sounds/jimwat_under-18.mp3');
 var jimwat1 = new buzz.sound('/sounds/jimwat_tunakatika-featuring-wamboe.mp3');
-var knel0 = new buzz.sound('/sounds/k-nel-ft-jae-rich-vera-shindika-produced-by-ghostboy.mp3');
-var knel1 = new buzz.sound('/sounds/naomis-baby_knel-ghostboy-ozmosis.mp3');
+var knel0 = new buzz.sound('/sounds/naomis-baby_knel-ghostboy-ozmosis.mp3');
+var knel1 = new buzz.sound('/sounds/k-nel-ft-jae-rich-vera-shindika-produced-by-ghostboy.mp3');
 var knel2 = new buzz.sound('/sounds/k-nel__naomis-baby-produced-by-deejay-snake-from-portugal.mp3');
 var elizabethwambui0 = new buzz.sound('/sounds/elizabeth-wambui_nianguriire.mp3');
 var gabirodahiphop0 = new buzz.sound('/sounds/gabiro-dahiphop_Ujumbe.mp3');
@@ -30,9 +30,11 @@ var dspark0 = new buzz.sound('/sounds/dspark_be-strong.mp3');
 var revelation0 = new buzz.sound('/sounds/revelation_nionyeshe.mp3');
 var pacekenya0 = new buzz.sound('/sounds/pace-kenya_hands.mp3');
 var pacekenya1 = new buzz.sound('/sounds/pace-kenya_go-banannas.mp3');
-var revelation0 = new buzz.sound('/sounds/pace-kenya_twende-safari.mp3');
-var rebbzondari0 = new buzz.sound('/sounds/rebbz-ondari_nasimama.mp3');
+var pacekenya2 = new buzz.sound('/sounds/pace-kenya_twende-safari.mp3');
+var rebbzondari0 = new buzz.sound('/sounds/rebbz-ondari_celebrate.mp3');
+var rebbzondari1 = new buzz.sound('/sounds/rebbz-ondari_nasimama.mp3');
 var sizzla0 = new buzz.sound('/sounds/sizzla.mp3');
+var ibrd0 = new buzz.sound('sounds/IBRhymes-theDynamite_fuanyayo-ft-dc.mp3');
 
 //if (Template.artist.name == "Esther Liana")    var revelation = new buzz.sound('/sounds/
 
@@ -127,6 +129,17 @@ Template.artist.events({
         bobbyghostboydinero0.play().stop();        
   },
 
+    'click .bobby-ghostboy-dinero1': function(event) {
+
+        bobbyghostboydinero1.play().fadeIn();    
+
+  },
+
+  'click .bobby-ghostboy-dinero1_stop': function(event) {
+
+        bobbyghostboydinero1.play().stop();        
+  },
+
 
     'click .k-nel0': function(event) {
 
@@ -137,6 +150,28 @@ Template.artist.events({
   'click .k-nel0_stop': function(event) {
 
         knel0.play().stop();        
+  },
+
+      'click .k-nel1': function(event) {
+
+        knel1.play().fadeIn();    
+
+  },
+
+  'click .k-nel1_stop': function(event) {
+
+        knel1.play().stop();        
+  },
+
+  'click .k-nel2': function(event) {
+
+        knel2.play().fadeIn();    
+
+  },
+
+  'click .k-nel2_stop': function(event) {
+
+        knel2.play().stop();        
   },
 
 
@@ -169,6 +204,17 @@ Template.artist.events({
         sizzla0.play().fadeIn();    
 
   },
+        'click .ibrd0_stop': function(event) {
+
+        ibrd0.play().stop();    
+
+  },
+
+      'click .ibrd0': function(event) {
+
+        ibrd0.play().fadeIn();    
+
+  },
 
       'click .judaking1_stop': function(event) {
 
@@ -176,37 +222,37 @@ Template.artist.events({
 
   },
 
-   'click .gabiro-hiphop0': function(event) {
+   'click .gabiro-dahiphop0': function(event) {
 
         gabirodahiphop0.play().fadeIn();    
 
   },
 
-   'click .gabiro-hiphop0_stop': function(event) {
+   'click .gabiro-dahiphop0_stop': function(event) {
 
         gabirodahiphop0.play().stop();    
 
   },
 
-   'click .gabiro-hiphop1': function(event) {
+  'click .gabiro-dahiphop1': function(event) {
 
         gabirodahiphop1.play().fadeIn();    
 
   },
 
-   'click .gabiro-hiphop1_stop': function(event) {
+  'click .gabiro-dahiphop1_stop': function(event) {
 
         gabirodahiphop1.play().stop();    
 
   },
 
-     'click .bern-musiq0': function(event) {
+  'click .bern-musiq0': function(event) {
 
         bernmusiq0.play().fadeIn();    
 
   },
 
-   'click .bern-musiq0_stop': function(event) {
+  'click .bern-musiq0_stop': function(event) {
 
         bernmusiq0.play().stop();    
 
@@ -222,7 +268,7 @@ Template.artist.events({
         bronzeh0.play().stop();        
   },
   
-    'click .bronzeh1': function(event) {
+  'click .bronzeh1': function(event) {
 
         bronzeh1.play().fadeIn();    
 
@@ -245,7 +291,7 @@ Template.artist.events({
         jimwat0.play().stop();        
   },
 
-    'click .jimwat1': function(event) {
+  'click .jimwat1': function(event) {
 
         jimwat1.play().fadeIn();    
 
@@ -257,30 +303,30 @@ Template.artist.events({
         jimwat1.play().stop();        
   },
 
-    'click .jclintoz-mfalme0': function(event) {
+  'click .clintoz-mfalme0': function(event) {
 
         clintoz0.play().fadeIn();    
 
   },
 
-  'click .jjclintoz-mfalme0_stop': function(event) {
+  'click .clintoz-mfalme0_stop': function(event) {
 
         clintoz0.play().stop();        
   },
 
-  'og-young0': function(event) {
+  'click .ogyoung0': function(event) {
 
         ogyoung0.play().fadeIn();    
 
   },
 
-  'click .og-young0_stop': function(event) {
+  'click .ogyoung0_stop': function(event) {
 
         ogyoung0.play().stop();        
   },
 
 
-  'rebbzondari0': function(event) {
+  'click .rebbzondari0': function(event) {
 
         rebbzondari0.play().fadeIn();    
 
@@ -291,7 +337,19 @@ Template.artist.events({
         rebbzondari0.play().stop();        
   },
 
-  'pace-kenya0': function(event) {
+  'click .rebbzondari1': function(event) {
+
+        rebbzondari1.play().fadeIn();    
+
+  },
+
+  'click .rebbzondari1_stop': function(event) {
+
+        rebbzondari1.play().stop();        
+  },
+
+
+  'click .pace-kenya0': function(event) {
 
         pacekenya0.play().fadeIn();    
 
@@ -303,7 +361,7 @@ Template.artist.events({
   },
 
 
-  'pace-kenya1': function(event) {
+  'click .pace-kenya1': function(event) {
 
         pacekenya1.play().fadeIn();    
 
@@ -314,6 +372,17 @@ Template.artist.events({
         pacekenya1.play().stop();        
   },
 
+
+  'click .pace-kenya2': function(event) {
+
+        pacekenya2.play().fadeIn();    
+
+  },
+
+  'click .pace-kenya2_stop': function(event) {
+
+        pacekenya2.play().stop();        
+  },
 
 
   'click .khidy-tz0': function(event) {
@@ -381,13 +450,13 @@ Template.artist.events({
 
   },
 
-  'click .makena-skosh0': function(event) {
+  'click .makena-shosh0': function(event) {
 
         makena0.play().fadeIn();    
 
   },
 
-  'click .makena-skosh0_stop': function(event) {
+  'click .makena-shosh0_stop': function(event) {
 
         makena0.play().stop();        
   },
