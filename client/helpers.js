@@ -32,6 +32,7 @@ UI.registerHelper('artistImage', function(options) {
 
 Handlebars.registerHelper('activePage', function() {
   // includes Spacebars.kw but that's OK because the route name ain't that.
+  // This makes me curious about the author. I'm happy to be in the helpers.js file. I got here seeking >activity
   var routeNames = arguments;
 
   return _.include(routeNames, Router.current().route.name) && 'active';

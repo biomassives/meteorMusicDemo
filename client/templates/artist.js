@@ -35,6 +35,8 @@ var rebbzondari0 = new buzz.sound('/sounds/rebbz-ondari_celebrate.mp3');
 var rebbzondari1 = new buzz.sound('/sounds/rebbz-ondari_nasimama.mp3');
 var sizzla0 = new buzz.sound('/sounds/sizzla.mp3');
 var ibrd0 = new buzz.sound('sounds/IBRhymes-theDynamite_fuanyayo-ft-dc.mp3');
+var gvkk0 = new buzz.sound('sounds/gkv-kenya_weka.mp3');
+var gvkk0 = new buzz.sound('sounds/gkv-kenya_mtaa-yangu.mp3');
 
 //if (Template.artist.name == "Esther Liana")    var revelation = new buzz.sound('/sounds/
 
@@ -406,6 +408,27 @@ Template.artist.events({
 
         drgi0.play().stop();        
   },
+
+  'click .gkv-kenya0': function(event) {
+
+        gvkk0.play().fadeIn();    
+
+  },
+
+  'click .gkv-kenya0_stop': function(event) {
+
+        gvkk0.play().stop();        
+  },
+  'click .gkv-kenya1': function(event) {
+
+        gvkk1.play().fadeIn();    
+
+  },
+  'click .gkv-kenya1_stop': function(event) {
+
+        gvkk1.play().stop();        
+  },
+
 
   'click .makadem0': function(event) {
 
