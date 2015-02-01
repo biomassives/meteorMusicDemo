@@ -4,7 +4,7 @@ App.info({
   author: 'Greg Willson',
   email: 'greg@biomassiv.es',
   website: 'http://biomassiv.es',
-  version: '0.0.1'
+  version: '0.0.2'
 });
 
 App.icons({
