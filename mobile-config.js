@@ -1,10 +1,10 @@
 App.info({
   name: 'BuyMziki App',
-  description: 'A social music sharing app made in Meteor.',
+  description: 'A social music sharing app featuring the BuyMziki Community.',
   author: 'Greg Willson',
   email: 'greg@biomassiv.es',
-  website: 'http://biomassiv.es',
-  version: '0.0.2'
+  website: 'http://buymziki.com',
+  version: '0.0.4'
 });
 
 App.icons({

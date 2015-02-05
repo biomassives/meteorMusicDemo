@@ -1,42 +1,43 @@
 var TAB_KEY = 'artistShowTab';
 
+if((navigator.userAgent.match(/Android/i)) == "Android") var prePath = '/android_asset/www';
+if((navigator.userAgent.match(/Android/i)) != "Android") var prePath = '';
 
-var esther0 = new buzz.sound('/sounds/EstherLiana_Imela.mp3');
-var bobbyghostboydinero0 = new buzz.sound('/sounds/ghostboy_phantom-family.mp3');
-var bobbyghostboydinero1 = new buzz.sound('/sounds/ghostboy_Bean-Town.mp3');
-var elizabethwambui0 = new buzz.sound('/sounds/elizabeth-wambui_nianguriire.mp3');
-var elizabethwambui1 = new buzz.sound('/sounds/elizabeth-wambui_nianguriire.mp3');
-var jimwat0 = new buzz.sound('/sounds/jimwat_under-18.mp3');
-var jimwat1 = new buzz.sound('/sounds/jimwat_tunakatika-featuring-wamboe.mp3');
-var knel0 = new buzz.sound('/sounds/naomis-baby_knel-ghostboy-ozmosis.mp3');
-var knel1 = new buzz.sound('/sounds/k-nel-ft-jae-rich-vera-shindika-produced-by-ghostboy.mp3');
-var knel2 = new buzz.sound('/sounds/k-nel__naomis-baby-produced-by-deejay-snake-from-portugal.mp3');
-var elizabethwambui0 = new buzz.sound('/sounds/elizabeth-wambui_nianguriire.mp3');
-var gabirodahiphop0 = new buzz.sound('/sounds/gabiro-dahiphop_Ujumbe.mp3');
-var gabirodahiphop1 = new buzz.sound('/sounds/gabiro-dahiphop_naitwa-gabiro.mp3');
-var judaking0 = new buzz.sound('/sounds/judaking-Just-a-dreamer.mp3');
-var judaking1 = new buzz.sound('/sounds/judaking_mercy-and-love.mp3');
-var khidytz0 = new buzz.sound('/sounds/khidy-tz_mdogo-mdogo.mp3');
-var drgi0 = new buzz.sound('/sounds/dr-gi.mp3');
-var bronzeh0 = new buzz.sound('/sounds/bronzeh_Sikumob.mp3');
-var bronzeh1 = new buzz.sound('/sounds/bronzeh_nasifu_yangu.mp3');
-var bernmusiq0 = new buzz.sound('/sounds/bern-music_kwa-macho.mp3');
-var makadem0 = new buzz.sound('/sounds/makadem_Orudo-aye.mp3');
-var makadem1 = new buzz.sound('/sounds/Makadem_mganga-Mkuu.mp3');
-var makena0 = new buzz.sound('/sounds/makena-skosh_.mp3');
-var clintoz0 = new buzz.sound('/sounds/clintoz_kwenye-mitambo.mp3');
-var ogyoung0 = new buzz.sound('/sounds/og-young_still-i-rule.mp3');
-var dspark0 = new buzz.sound('/sounds/dspark_be-strong.mp3');
-var revelation0 = new buzz.sound('/sounds/revelation_nionyeshe.mp3');
-var pacekenya0 = new buzz.sound('/sounds/pace-kenya_hands.mp3');
-var pacekenya1 = new buzz.sound('/sounds/pace-kenya_go-banannas.mp3');
-var pacekenya2 = new buzz.sound('/sounds/pace-kenya_twende-safari.mp3');
-var rebbzondari0 = new buzz.sound('/sounds/rebbz-ondari_celebrate.mp3');
-var rebbzondari1 = new buzz.sound('/sounds/rebbz-ondari_nasimama.mp3');
-var sizzla0 = new buzz.sound('/sounds/sizzla.mp3');
-var ibrd0 = new buzz.sound('sounds/IBRhymes-theDynamite_fuanyayo-ft-dc.mp3');
-var gvkk0 = new buzz.sound('sounds/gkv-kenya_weka.mp3');
-var gvkk0 = new buzz.sound('sounds/gkv-kenya_mtaa-yangu.mp3');
+var esther0 = new buzz.sound(prePath + '/sounds/EstherLiana_Imela.mp3');
+var bobbyghostboydinero0 = new buzz.sound(prePath + '/sounds/ghostboy_phantom-family.mp3');
+var bobbyghostboydinero1 = new buzz.sound(prePath + '/sounds/ghostboy_Bean-Town.mp3');
+var elizabethwambui0 = new buzz.sound(prePath + '/sounds/elizabeth-wambui_nianguriire.mp3');
+var elizabethwambui1 = new buzz.sound(prePath + '/sounds/elizabeth-wambui_nianguriire.mp3');
+var jimwat0 = new buzz.sound(prePath + '/sounds/jimwat_under-18.mp3');
+var jimwat1 = new buzz.sound(prePath + '/sounds/jimwat_tunakatika-featuring-wamboe.mp3');
+var knel0 = new buzz.sound(prePath + '/sounds/naomis-baby_knel-ghostboy-ozmosis.mp3');
+var knel1 = new buzz.sound(prePath + '/sounds/k-nel-ft-jae-rich-vera-shindika-produced-by-ghostboy.mp3');
+var knel2 = new buzz.sound(prePath + '/sounds/k-nel__naomis-baby-produced-by-deejay-snake-from-portugal.mp3');
+var elizabethwambui0 = new buzz.sound(prePath + '/sounds/elizabeth-wambui_nianguriire.mp3');
+var gabirodahiphop0 = new buzz.sound(prePath + '/sounds/gabiro-dahiphop_Ujumbe.mp3');
+var gabirodahiphop1 = new buzz.sound(prePath + '/sounds/gabiro-dahiphop_naitwa-gabiro.mp3');
+var judaking0 = new buzz.sound(prePath + '/sounds/judaking-Just-a-dreamer.mp3');
+var judaking1 = new buzz.sound(prePath + '/sounds/judaking_mercy-and-love.mp3');
+var khidytz0 = new buzz.sound(prePath + '/sounds/khidy-tz_mdogo-mdogo.mp3');
+var drgi0 = new buzz.sound(prePath + '/sounds/dr-gi.mp3');
+var bronzeh0 = new buzz.sound(prePath + '/sounds/bronzeh_Sikumob.mp3');
+var bronzeh1 = new buzz.sound(prePath + '/sounds/bronzeh_nasifu_yangu.mp3');
+var bernmusiq0 = new buzz.sound(prePath + '/sounds/bern-music_kwa-macho.mp3');
+var makadem0 = new buzz.sound(prePath + '/sounds/makadem_Orudo-aye.mp3');
+var makadem1 = new buzz.sound(prePath + '/sounds/Makadem_mganga-Mkuu.mp3');
+var makena0 = new buzz.sound(prePath + '/sounds/makena-skosh_.mp3');
+var clintoz0 = new buzz.sound(prePath + '/sounds/clintoz_kwenye-mitambo.mp3');
+var ogyoung0 = new buzz.sound(prePath + '/sounds/og-young_still-i-rule.mp3');
+var dspark0 = new buzz.sound(prePath + '/sounds/dspark_be-strong.mp3');
+var revelation0 = new buzz.sound(prePath + '/sounds/revelation_nionyeshe.mp3');
+var pacekenya0 = new buzz.sound(prePath + '/sounds/pace-kenya_hands.mp3');
+var pacekenya1 = new buzz.sound(prePath + '/sounds/pace-kenya_go-banannas.mp3');
+var pacekenya2 = new buzz.sound(prePath + '/sounds/pace-kenya_twende-safari.mp3');
+var rebbzondari0 = new buzz.sound(prePath + '/sounds/rebbz-ondari_celebrate.mp3');
+var rebbzondari1 = new buzz.sound(prePath + '/sounds/rebbz-ondari_nasimama.mp3');
+var ibrd0 = new buzz.sound(prePath + 'sounds/IBRhymes-theDynamite_fuanyayo-ft-dc.mp3');
+var gvkk0 = new buzz.sound(prePath + 'sounds/gkv-kenya_weka.mp3');
+var gvkk1 = new buzz.sound(prePath + 'sounds/gkv-kenya_mtaa-yangu.mp3');
 
 //if (Template.artist.name == "Esther Liana")    var revelation = new buzz.sound('/sounds/
 
@@ -154,7 +155,7 @@ Template.artist.events({
         knel0.play().stop();        
   },
 
-      'click .k-nel1': function(event) {
+   'click .k-nel1': function(event) {
 
         knel1.play().fadeIn();    
 
@@ -467,6 +468,7 @@ Template.artist.events({
 
         revelation0.play().stop();        
   },
+
     'click .revelation0': function(event) {
 
         revelation0.play().fadeIn();    
@@ -508,6 +510,12 @@ Template.artist.events({
         buzz.play().stop();    
 
   },
+
+
+
+
+
+
 
   'click .js-remove-bookmark': function(event) {
     event.preventDefault();
