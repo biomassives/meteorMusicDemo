@@ -4,7 +4,7 @@ App.info({
   author: 'Greg Willson',
   email: 'greg@biomassiv.es',
   website: 'http://buymziki.com',
-  version: '0.0.4'
+  version: '0.0.5'
 });
 
 App.icons({

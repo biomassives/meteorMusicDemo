@@ -1,7 +1,11 @@
 var TAB_KEY = 'artistShowTab';
 
-if((navigator.userAgent.match(/Android/i)) == "Android") var prePath = '/android_asset/www';
-if((navigator.userAgent.match(/Android/i)) != "Android") var prePath = '';
+//if((navigator.userAgent.match(/Android/i)) == "Android") 
+
+var prePath = '/android_asset/www/application';
+
+//if((navigator.userAgent.match(/Android/i)) != "Android") var prePath = '';
+
 
 var esther0 = new buzz.sound(prePath + '/sounds/EstherLiana_Imela.mp3');
 var bobbyghostboydinero0 = new buzz.sound(prePath + '/sounds/ghostboy_phantom-family.mp3');
@@ -329,24 +333,24 @@ Template.artist.events({
   },
 
 
-  'click .rebbzondari0': function(event) {
+  'click .rebbz-ondari0': function(event) {
 
         rebbzondari0.play().fadeIn();    
 
   },
 
-  'click .rebbzondari0_stop': function(event) {
+  'click .rebbz-ondari0_stop': function(event) {
 
         rebbzondari0.play().stop();        
   },
 
-  'click .rebbzondari1': function(event) {
+  'click .rebbz-ondari1': function(event) {
 
         rebbzondari1.play().fadeIn();    
 
   },
 
-  'click .rebbzondari1_stop': function(event) {
+  'click .rebbz-ondari1_stop': function(event) {
 
         rebbzondari1.play().stop();        
   },
