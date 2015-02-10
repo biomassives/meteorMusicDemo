@@ -1,10 +1,10 @@
 App.info({
   name: 'BuyMziki App',
   description: 'A social music sharing app featuring the BuyMziki Community.',
-  author: 'Greg Willson',
+  author: 'BuyMziki Ltd.',
   email: 'greg@biomassiv.es',
   website: 'http://buymziki.com',
-  version: '0.0.5'
+  version: '0.0.6'
 });
 
 App.icons({
