@@ -2,7 +2,16 @@ var TAB_KEY = 'artistShowTab';
 
 //if((navigator.userAgent.match(/Android/i)) == "Android") 
 
-var prePath = '/android_asset/www/application';
+if (Meteor.isCordova) {
+  var prePath = 'file:///android_asset/www';
+}
+if (Meteor.isServer) {
+  var prePath = '';
+}
+if (Meteor.isClient) {
+  var prePath = '';
+}
+
 
 //if((navigator.userAgent.match(/Android/i)) != "Android") var prePath = '';
 
@@ -39,13 +48,9 @@ var pacekenya1 = new buzz.sound(prePath + '/sounds/pace-kenya_go-banannas.mp3');
 var pacekenya2 = new buzz.sound(prePath + '/sounds/pace-kenya_twende-safari.mp3');
 var rebbzondari0 = new buzz.sound(prePath + '/sounds/rebbz-ondari_celebrate.mp3');
 var rebbzondari1 = new buzz.sound(prePath + '/sounds/rebbz-ondari_nasimama.mp3');
-var ibrd0 = new buzz.sound(prePath + 'sounds/IBRhymes-theDynamite_fuanyayo-ft-dc.mp3');
-var gvkk0 = new buzz.sound(prePath + 'sounds/gkv-kenya_weka.mp3');
-var gvkk1 = new buzz.sound(prePath + 'sounds/gkv-kenya_mtaa-yangu.mp3');
-
-//if (Template.artist.name == "Esther Liana")    var revelation = new buzz.sound('/sounds/
-
-
+var ibrd0 = new buzz.sound(prePath + '/sounds/IBRhymes-theDynamite_fuanyayo-ft-dc.mp3');
+var gvkk0 = new buzz.sound(prePath + '/sounds/gkv-kenya_weka.mp3');
+var gvkk1 = new buzz.sound(prePath + '/sounds/gkv-kenya_mtaa-yangu.mp3');
 
 Template.artist.created = function() {
   if (Router.current().params.activityId)
